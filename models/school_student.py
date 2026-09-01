@@ -8,5 +8,5 @@ class SchoolStudent(models.Model):
     phone = fields.Integer(string='Student Phone', required=True)
     date_of_birth = fields.Date(string='Student Date', required=True)
     address = fields.Text(string='Student Address')
-    active = fields.Boolean()
+    active = fields.Boolean(string="Active", default=True)
     enrollment_ids=fields.One2many('school.enrollment', "student_id")

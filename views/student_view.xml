@@ -26,11 +26,11 @@
                         <group string="PERSONAL INFORMATION">
                             <field name="name"/>
                             <field name="phone"/>
-                            <field name="date_of_birth"/>
+                            <field name="date_of_birth" string="Birthday"/>
                         </group>
                         <group string="OTHER DETAILS">
                             <field name="address"/>
-                            <field name="active"/>
+<!--                            <field name="active"/>-->
                         </group>
                     </group>
 
