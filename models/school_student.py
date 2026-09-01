@@ -6,7 +6,7 @@ class SchoolStudent(models.Model):
 
     name = fields.Char(string='Student Name', required=True)
     phone = fields.Integer(string='Student Phone', required=True)
-    date = fields.Date(string='Student Date', required=True)
+    date_of_birth = fields.Date(string='Student Date', required=True)
     address = fields.Text(string='Student Address')
     active = fields.Boolean()
     enrollment_ids=fields.One2many('school.enrollment', "student_id")

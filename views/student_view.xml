@@ -1,19 +1,41 @@
 <odoo>
-    <record id="student_view_tree" model="ir.ui.view">
-        <field name="name">student.list</field>
-        <field name="model">student</field>
+    <!-- List View -->
+    <record id="student_view_list" model="ir.ui.view">
+        <field name="name">school.student.list</field>
+        <field name="model">school.student</field>
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
                 <field name="phone"/>
-                <field name="date"/>
-                <field name="address"/>
+                <field name="date_of_birth"/>
+                <field name="address" optional="1"/>
                 <field name="active"/>
                 <field name="enrollment_ids"/>
             </list>
         </field>
     </record>
 
+    <!-- Form View -->
+    <record id="student_view_search" model="ir.ui.view">
+        <field name="name">school.student.search</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <search>
+               <field name="name"/>
+               <field name="phone"/>
+               <filter name="filter_by_name" string="By Name" domin="[('name')]"/>
+               <filter name="group_by_active" string="Group_By_Active" context="{'group_by':'active'}"/>
+
+            </search>
+        </field>
+    </record>
+<record id="student_view_search" model="ir.ui.view">
+    <field name="name"></field>
+
+
+</record>
+        name=""
+    <!-- Menuitem -->
     <menuitem id="student_action_menu"
               name="Students Management"
               parent="school_student_sub_menu"

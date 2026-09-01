@@ -5,9 +5,10 @@
     'author': 'ibrahim',
     'category': 'Services',
     'depends': ['base'],
-    'data': [  'views/base_menu.xml',
+    'data': [  'security/ir.model.access.csv',
+               'views/base_menu.xml',
                'views/student_view.xml',
-               'security/ir.model.access.csv',
+
     ],
     'installable': True,
     'application': True,
