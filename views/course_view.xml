@@ -67,14 +67,13 @@
         <field name="model">school.course</field>
         <field name="arch" type="xml">
             <search>
+                <!-- حقول البحث السريع في شريط البحث -->
                 <field name="name"/>
                 <field name="description"/>
-                <filter name="filter_active" string="Active" domain="[('active', '=', True)]"/>
-                <filter name="filter_inactive" string="Archived" domain="[('active', '=', False)]"/>
-                <separator/>
-                <group expand="0" string="Group By">
-                    <filter name="group_by_active" string="Active Status" context="{'group_by': 'active'}"/>
-                </group>
+
+                <!-- الفلاتر (Filters) -->
+                <filter name="filter_active" string="Active Courses" domain="[('active', '=', True)]"/>
+                <filter name="filter_inactive" string="Archived Courses" domain="[('active', '=', False)]"/>
             </search>
         </field>
     </record>

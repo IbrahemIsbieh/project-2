@@ -45,9 +45,8 @@
                 <templates>
                     <t t-name="card">
                         <div class="oe_kanban_global_click">
-
                             <h3 class="h3 text-muted"><field name="student_id"/></h3>
-                            <h3 class="h3 text-muted"> <field name="grade"/></h3>
+                            <h3 class="h3 text-muted"><field name="grade"/></h3>
                         </div>
                     </t>
                 </templates>
@@ -55,7 +54,7 @@
         </field>
     </record>
 
-    <!-- Search View (Search, Filters, Group By) -->
+    <!-- Search View (تصحيح الممارسات لـ Odoo 19) -->
     <record id="enrollment_view_search" model="ir.ui.view">
         <field name="name">school.enrollment.search</field>
         <field name="model">school.enrollment</field>
@@ -65,31 +64,31 @@
                 <field name="student_id"/>
                 <field name="course_id"/>
 
-                <!-- الفلاتر (Filters) -->
+                <!-- الفلاتر -->
                 <filter name="filter_active" string="Active" domain="[('active', '=', True)]"/>
                 <filter name="filter_inactive" string="Archived" domain="[('active', '=', False)]"/>
 
                 <separator/>
 
-                <!-- التجميع (Group By) -->
-                <group expand="0" string="Group By">
-                    <filter name="group_by_student" string="Student" context="{'group_by': 'student_id'}"/>
-                    <filter name="group_by_course" string="Course" context="{'group_by': 'course_id'}"/>
-                    <filter name="group_by_grade" string="Grade" context="{'group_by': 'grade'}"/>
-                </group>
+                <!-- خيارات التجميع (Group By) مستقلة بدون وسم group -->
+                <filter name="group_by_student" string="Student" context="{'group_by': 'student_id'}"/>
+                <filter name="group_by_course" string="Course" context="{'group_by': 'course_id'}"/>
+                <filter name="group_by_grade" string="Grade" context="{'group_by': 'grade'}"/>
             </search>
         </field>
     </record>
-<record id="enrollment_view_calendar" model="ir.ui.view">
+
+    <!-- Calendar View -->
+    <record id="enrollment_view_calendar" model="ir.ui.view">
         <field name="name">school.enrollment.calendar</field>
         <field name="model">school.enrollment</field>
         <field name="arch" type="xml">
             <calendar date_start="enrollment_date" color="student_id">
                 <field name="student_id"/>
-
             </calendar>
         </field>
     </record>
+
     <!-- Action -->
     <record id="action_enrollment" model="ir.actions.act_window">
         <field name="name">Enrollments</field>
