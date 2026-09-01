@@ -1,0 +1,7 @@
+<odoo>
+    <!-- القائمة الرئيسية الأب أولاً -->
+    <menuitem id="school_root_menu" name="School"/>
+
+    <!-- القائمة الفرعية التابعة لها -->
+    <menuitem id="school_student_sub_menu" name="Students" parent="school_root_menu"/>
+</odoo>

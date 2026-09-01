@@ -1,0 +1,21 @@
+<odoo>
+    <record id="student_view_tree" model="ir.ui.view">
+        <field name="name">student.list</field>
+        <field name="model">student</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="date"/>
+                <field name="address"/>
+                <field name="active"/>
+                <field name="enrollment_ids"/>
+            </list>
+        </field>
+    </record>
+
+    <menuitem id="student_action_menu"
+              name="Students Management"
+              parent="school_student_sub_menu"
+              action="action_student_id"/>
+</odoo>
