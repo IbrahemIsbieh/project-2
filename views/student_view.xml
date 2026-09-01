@@ -23,7 +23,7 @@
             <search>
                <field name="name"/>
                <field name="phone"/>
-               <filter name="filter_by_name" string="By Name" domin="[('name')]"/>
+               <filter name="filter_by_name" string="By Name" domain="[('name')]"/>
                <filter name="group_by_active" string="Group_By_Active" context="{'group_by':'active'}"/>
 
             </search>

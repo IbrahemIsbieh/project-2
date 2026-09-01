@@ -1,5 +1,5 @@
 from odoo import models, fields
-class school_course(models.Model):
+class SchoolCourse(models.Model):
     _name = 'school.course'
     _description = 'School Information'
 

@@ -1,0 +1,42 @@
+<odoo>
+    <!-- List View -->
+    <record id="course_view_list" model="ir.ui.view">
+        <field name="name">school.course.list</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="credits"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="course_view_search" model="ir.ui.view">
+        <field name="name">school.course.search</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <filter name="filter_active" string="Active" domain="[('active', '=', True)]"/>
+                <filter name="group_by_active" string="Active Status" context="{'group_by': 'active'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_course" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">school.course</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem id="course_action_menu"
+              name="Courses Management"
+              parent="school_student_sub_menu"
+              action="action_course"/>
+</odoo>

@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class school_enrollment(models.Model):
+class SchoolEnrollment(models.Model):
     _name = 'school.enrollment'
     _description = 'School Enrollment'
 
