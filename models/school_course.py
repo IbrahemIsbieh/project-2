@@ -7,5 +7,27 @@ class SchoolCourse(models.Model):
     description = fields.Text('Course Description')
     active = fields.Boolean()
     enrollment_ids=fields.One2many('school.enrollment', "course_id")
+    state=fields.Selection([
+                                   ('draft','Draft'),
+                                   ('scheduled','Scheduled'),
+                                   ('start','In progress'),
+                                   ('done','Completed'),
+                                   ('cancel','Cancelled') ],default='draft')
 
 
+    def action_schedule(self):
+        for rec in self:
+            rec.state="scheduled"
+
+
+    def action_start(self):
+         for rec in self:
+             rec.state = "start"
+
+    def action_done(self):
+        for rec in self:
+            rec.state = "done"
+
+    def action_cancel(self):
+        for rec in self:
+            rec.state = "cancel"

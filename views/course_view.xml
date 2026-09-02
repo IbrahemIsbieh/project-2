@@ -18,20 +18,37 @@
         <field name="model">school.course</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+
+                        <button type="object" name="action_schedule" string="Schedule" class="btn btn-primary" invisible="state!= 'draft'"/>
+                        <button type="object" name="action_start" string="Start" class="btn btn-secondary" invisible="state != 'scheduled'"/>
+                        <button type="object" name="action_done" string="Completed" class="btn btn-success" invisible="state != 'start'"/>
+                        <button type="object" name="action_cancel" string="Cancel" class="btn btn-danger" invisible="state =='draft' or state=='done' or state == 'cancel'"/>
+                        <field name="state" widget="statusbar"/>
+                </header>
+
                 <sheet>
+
                     <group>
                         <group string="COURSE DETAILS">
-                            <field name="name"/>
-                            <field name="active"/>
+                            <field name="name" readonly="state =='done'"/>
+                            <field name="active" readonly="state =='done'"/>
                         </group>
                         <group string="ADDITIONAL INFO">
-                            <field name="description"/>
+                            <field name="description" readonly="state =='done'"/>
                         </group>
                     </group>
 
                     <notebook>
-                        <page string="Enrollments" name="enrollments">
-                            <field name="enrollment_ids"/>
+                        <page string="Enrolled Course" >
+                            <field name="enrollment_ids" readonly="state =='done'">
+                                <list editable="bottom">
+                                    <field name="student_id" />
+                                    <field name="grade"/>
+                                    <field name="enrollment_date"/>
+                                </list>
+
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

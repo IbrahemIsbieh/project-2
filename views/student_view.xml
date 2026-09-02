@@ -38,8 +38,15 @@
                     </group>
 
                     <notebook>
-                        <page string="Enrollments" name="enrollments">
-                            <field name="enrollment_ids"/>
+                        <page string="Enrolled Course">
+                            <field name="enrollment_ids">
+                             <list editable="bottom">
+                                <field name="course_id"/>
+                                <field name="grade"/>
+                                <field name="enrollment_date"/>
+                             </list>
+                             </field>
+
                         </page>
                     </notebook>
                 </sheet>
