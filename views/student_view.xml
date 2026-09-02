@@ -29,6 +29,7 @@
                             <field name="phone"/>
                             <field name="date_of_birth" string="Birthday"/>
                             <field name="age"/>
+                            <field name="type"/>
                         </group>
                         <group string="OTHER DETAILS">
                             <field name="address"/>

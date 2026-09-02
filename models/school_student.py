@@ -16,6 +16,7 @@ class SchoolStudent(models.Model):
     age=fields.Integer(string='Student Age',compute='_compute_age_')
     address = fields.Text(string='Student Address')
     active = fields.Boolean(string="Active", default=True)
+    type=fields.Selection([('male','Male'),('female','Female')],default='male')
     enrollment_ids=fields.One2many('school.enrollment', "student_id")
 
     @api.constrains("age")
