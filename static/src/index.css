@@ -1,0 +1,139 @@
+/* ==========================================
+   School Management System - Modern UI Theme
+   ========================================== */
+
+/* 1. خلفية الصفحة العامة وتنسيق البطاقة الأساسية */
+.o_action_manager {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+}
+
+.o_form_view .o_form_sheet {
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+    padding: 30px !important;
+}
+
+/* 2. تحسين خلفية وتصميم الشريط العلوي للمنيو (Control Panel) */
+.o_control_panel {
+    background: #1e293b !important; /* لون كحلي فاخر */
+    border-bottom: 2px solid #3b82f6 !important;
+    color: #ffffff !important;
+    border-radius: 0 0 12px 12px !important;
+    padding: 12px 20px !important;
+    margin-bottom: 15px !important;
+}
+
+.o_control_panel .breadcrumb-item,
+.o_control_panel .o_breadcrumb_item {
+    color: #93c5fd !important;
+    font-weight: 600 !important;
+}
+
+/* 3. تنسيق شريط البحث وأزرار الفلاتر (باللون الأبيض) */
+.o_control_panel .o_search_bar,
+.o_control_panel .o_searchview,
+.o_control_panel .o_searchview_input_container {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    padding: 2px 8px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.o_control_panel .o_searchview input,
+.o_control_panel .o_searchview .o_searchview_icon,
+.o_control_panel .o_searchview_facet {
+    color: #0f172a !important;
+}
+
+.o_control_panel .o_searchview_facet {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+}
+
+.o_control_panel .o_searchview_facet .o_searchview_facet_label {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.o_control_panel .o_search_options .btn {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1px solid #cbd5e1 !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}
+
+.o_control_panel .o_search_options .btn:hover {
+    background-color: #f8fafc !important;
+    border-color: #2563eb !important;
+    color: #2563eb !important;
+}
+
+/* 4. تنسيق أزرار التحكم بالشرائط والأكشنز */
+.o_control_panel .btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+.o_control_panel .btn-primary:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* 5. عناوين الحقول والنصوص داخل Form Enrollment */
+.o_form_view .oe_title h1 input,
+.o_form_view [name="student_id"] {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    font-size: 1.8rem !important;
+}
+
+.o_form_view .o_group .g-col-sm-2,
+.o_form_view label {
+    color: #475569 !important;
+    font-weight: 600 !important;
+}
+
+/* 6. تنسيق شريط الدرجات (Progressbar Widget) */
+.o_progressbar {
+    height: 16px !important;
+    border-radius: 10px !important;
+    background-color: #e2e8f0 !important;
+    overflow: hidden;
+}
+
+.o_progressbar .o_progressbar_complete {
+    background: linear-gradient(90deg, #2563eb 0%, #10b981 100%) !important;
+    border-radius: 10px !important;
+}
+
+/* 7. تحسين شكل كروت الـ Kanban View */
+.o_kanban_view .oe_kanban_global_click {
+    border-radius: 12px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-top: 4px solid #2563eb !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.2s ease-in-out !important;
+    background-color: #ffffff !important;
+}
+
+.o_kanban_view .oe_kanban_global_click:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 8. تحسين جداول الـ List View */
+.o_list_renderer .o_list_table {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.o_list_renderer .o_list_table thead tr {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+}

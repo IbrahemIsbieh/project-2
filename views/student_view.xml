@@ -7,6 +7,7 @@
             <list>
                 <field name="name"/>
                 <field name="phone"/>
+                <field name="age"/>
                 <field name="date_of_birth"/>
                 <field name="address" optional="1"/>
                 <field name="active"/>
@@ -27,6 +28,7 @@
                             <field name="name"/>
                             <field name="phone"/>
                             <field name="date_of_birth" string="Birthday"/>
+                            <field name="age"/>
                         </group>
                         <group string="OTHER DETAILS">
                             <field name="address"/>

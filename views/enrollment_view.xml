@@ -27,6 +27,7 @@
                             <field name="enrollment_date"/>
                         </group>
                         <group string="ACADEMIC INFO">
+                            <field name="phone"/>
                             <field name="grade"/>
                             <field name="active"/>
                         </group>

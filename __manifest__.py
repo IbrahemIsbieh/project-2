@@ -4,7 +4,8 @@
     'summary': 'School Management System',
     'author': 'ibrahim',
     'category': 'Services',
-    'depends': ['base'],
+    'depends': ['base','web'],
+
     'data': [  'security/ir.model.access.csv',
                'views/base_menu.xml',
                'views/student_view.xml',
@@ -12,6 +13,11 @@
                'views/enrollment_view.xml',
 
     ],
+'assets': {
+        'web.assets_backend': [
+            'school_app/static/src/index.css',
+        ],
+    },
     'installable': True,
     'application': True,
 }
