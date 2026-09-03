@@ -4,3 +4,5 @@ access_school_enrollment_by_manager,school_enrollment_by_manager,model_school_en
 access_school_course_by_manager,school_course_by_manager,model_school_course,school_app.group_manage,1,1,1,1
 access_school_student_by_teacher,access_school_student_by_teacher,model_school_student,school_app.group_teacher,1,1,0,0
 access_school_enrollment_by_teacher,access_school_enrollment_by_teacher,model_school_enrollment,school_app.group_teacher,1,0,0,0
+access_student_student_user,access.student.student.user,model_student_student,base.group_user,1,1,1,0
+access_student_student_manager,access.student.student.manager,model_student_student,school_app.group_manage,1,1,1,1

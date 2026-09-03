@@ -8,7 +8,7 @@ class Student(models.Model):
 
 class SchoolStudent(models.Model):
     _name = 'school.student'
-    _description = 'School Student'
+    _description = 'School Information'
 
     name = fields.Char(string='Student Name', required=True)
     phone = fields.Char(string='Student Phone',size=10)
@@ -18,7 +18,7 @@ class SchoolStudent(models.Model):
     active = fields.Boolean(string="Active", default=True)
     type=fields.Selection([('male','Male'),('female','Female')],default='male')
     enrollment_ids=fields.One2many('school.enrollment', "student_id")
-
+    teacher_id=fields.Many2one('res.users',string='Teacher')
     @api.constrains("age")
     def _check_age(self):
         for rec in self:

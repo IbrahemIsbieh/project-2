@@ -6,7 +6,8 @@
     'category': 'Services',
     'depends': ['base','web'],
 
-    'data': [  'security/groups.xml',
+    'data': [  'security/security.xml',
+               'security/groups.xml',
                'security/ir.model.access.csv',
                'views/base_menu.xml',
                'views/student_view.xml',
