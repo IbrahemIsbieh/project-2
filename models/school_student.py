@@ -19,6 +19,7 @@ class SchoolStudent(models.Model):
     type=fields.Selection([('male','Male'),('female','Female')],default='male')
     enrollment_ids=fields.One2many('school.enrollment', "student_id")
     teacher_id=fields.Many2one('res.users',string='Teacher')
+    parent_id = fields.Many2one('res.users', string='Parent')
     @api.constrains("age")
     def _check_age(self):
         for rec in self:

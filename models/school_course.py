@@ -1,7 +1,7 @@
 from odoo import models, fields
 class SchoolCourse(models.Model):
     _name = 'school.course'
-    _description = 'School Information'
+    _description = 'School Course'
 
     name = fields.Char('Course Name', required=True)
     description = fields.Text('Course Description')

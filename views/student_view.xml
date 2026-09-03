@@ -34,6 +34,7 @@
                         <group string="OTHER DETAILS">
                             <field name="address"/>
                             <field name="teacher_id" string="Teacher" groups="school_app.group_manage"/>
+                            <field name="parent_id"/>
 <!--                            <field name="active"/>-->
                         </group>
                     </group>
