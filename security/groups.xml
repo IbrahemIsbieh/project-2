@@ -1,0 +1,16 @@
+<odoo>
+    <!-- مجموعة مدير المدرسة -->
+    <record id="group_manage" model="res.groups">
+        <field name="name">School Management / Manager</field>
+    </record>
+
+    <!-- مجموعة المعلم -->
+    <record id="group_teacher" model="res.groups">
+        <field name="name">School Management / Teacher</field>
+    </record>
+
+    <!-- مجموعة ولي الأمر -->
+    <record id="group_parent" model="res.groups">
+        <field name="name">School Management / Parent</field>
+    </record>
+</odoo>

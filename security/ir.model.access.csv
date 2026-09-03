@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_school_student_user,school_student.user,model_school_student,base.group_user,1,1,1,1
-access_school_enrollment_user,school_enrollment.user,model_school_enrollment,base.group_user,1,1,1,1
-access_school_course_user,school_course.user,model_school_course,base.group_user,1,1,1,1
-
+access_school_student_by_manager,school_student_by_manager,model_school_student,school_app.group_manage,1,1,1,1
+access_school_enrollment_by_manager,school_enrollment_by_manager,model_school_enrollment,school_app.group_manage,1,1,1,1
+access_school_course_by_manager,school_course_by_manager,model_school_course,school_app.group_manage,1,1,1,1
+access_school_student_by_teacher,access_school_student_by_teacher,model_school_student,school_app.group_teacher,1,1,0,0
+access_school_enrollment_by_teacher,access_school_enrollment_by_teacher,model_school_enrollment,school_app.group_teacher,1,0,0,0
