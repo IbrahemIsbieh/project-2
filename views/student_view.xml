@@ -23,6 +23,7 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active == True"/>
                     <group>
                         <group string="PERSONAL INFORMATION">
                             <field name="name"/>
@@ -35,7 +36,7 @@
                             <field name="address"/>
                             <field name="teacher_id" string="Teacher" groups="school_app.group_manage"/>
                             <field name="parent_id"/>
-<!--                            <field name="active"/>-->
+                            <field name="active" invisible="1" />
                         </group>
                     </group>
 

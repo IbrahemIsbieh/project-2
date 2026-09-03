@@ -4,7 +4,7 @@
     'summary': 'School Management System',
     'author': 'ibrahim',
     'category': 'Services',
-    'depends': ['base','web'],
+    'depends': ['base','web','sale'],
 
     'data': [  'security/security.xml',
                'security/groups.xml',
@@ -13,6 +13,7 @@
                'views/student_view.xml',
                'views/course_view.xml',
                'views/enrollment_view.xml',
+                'views/sale_order_view.xml',
 
     ],
 'assets': {

@@ -1,6 +1,7 @@
+import typing
 from email.policy import default
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError,UserError
 from datetime import date
 
 class Student(models.Model):
@@ -23,8 +24,8 @@ class SchoolStudent(models.Model):
     @api.constrains("age")
     def _check_age(self):
         for rec in self:
-            if rec.age and (rec.age < 6 or rec.age > 12):
-                raise ValidationError("Student Age must be between 6 and 12")
+            if rec.age and (rec.age < 6 or rec.age > 15):
+                raise ValidationError("Student Age must be between 6 and 15")
 
     @api.depends('date_of_birth')
     def _compute_age_(self):
@@ -34,3 +35,17 @@ class SchoolStudent(models.Model):
                 rec.age = (today.year - rec.date_of_birth.year)
             else:
                 rec.age = 0
+
+    @api.constrains('phone')
+    def _check_phone_number(self):
+        for record in self:
+            if record.phone:
+                if not record.phone.isdigit():
+                    raise ValidationError("Phone number must contain numbers only.")
+                if not record.phone.startswith('0'):
+                    raise ValidationError("Phone number must start with 0.")
+
+    def unlink(self):
+        if not self.env.user.has_group('school_app.group_manage'):
+            raise UserError("You are not allowed to unlink this School Student.")
+        return super(SchoolStudent, self).unlink()

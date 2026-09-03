@@ -12,5 +12,11 @@
         <field name="domain_force">[('student_id.teacher_id', '=', user.id)]</field>
         <field name="groups" eval="[(4, ref('school_app.group_teacher'))]"/>
     </record>
+    <record id="rule_student_by_parent" model="ir.rule">
+    <field name="name">Parent: see only their children</field>
+    <field name="model_id" ref="school_app.model_school_student"/>
+    <field name="domain_force">[('parent_id', '=', user.id)]</field>
+    <field name="groups" eval="[(4, ref('school_app.group_parent'))]"/>
+</record>
 
 </odoo>
